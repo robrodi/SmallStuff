@@ -40,7 +40,7 @@ if (-not(test-path($folder))){
       write-host $testName.PadRight(48) -nonewline; 
       $sortedDates | % { 
         if ($failedLists[$_].ContainsKey($testName)) { write-host -fore black -nonewline 'failed'.padRight(20) -back red; }
-        else { write-host -nonewline ''.PadRight(20); }
+        else { write-host -nonewline ''.PadRight(20,'.') -fore darkgray; }
       }
       write-host;
   }
